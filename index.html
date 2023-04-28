@@ -1,13 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tickets</title>
-  <!-- Add any necessary CSS or JS files here -->
-  <link rel="stylesheet" href="path/to/your/styles.css">
-  <script src="path/to/your/scripts.js"></script>
-</head>
+
+ <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <link rel="manifest" href="/manifest.json">
+
+    <script
+      type="text/javascript"
+      src="https://app.termly.io/embed.min.js"
+      data-auto-block="on"
+      data-website-uuid="e3781b47-56e6-4a03-987b-1ce448a36930"
+      ></script>
+
+  <!-- Google Analytics -->
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-164477789-1', 'auto', 'dandelion');
+  ga('dandelion.send', 'pageview');
+
+  ga('require', 'ecommerce');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+  
+  <link rel="preload" href="/fonts/circular/stylesheet.css" as="style">
+  <link href="/fonts/circular/stylesheet.css" rel="stylesheet">
+  <script src="//kit.fontawesome.com/13bb83cfaf.js"></script>
+
+  <link href="/infinite_admin/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+  <link href="/infinite_admin/plugins/bootstrap/bootstrap4/css/bootstrap.css" rel="stylesheet">
+  <link href="/infinite_admin/plugins/icon/themify-icons/themify-icons.css" rel="stylesheet">
+  <link href="/infinite_admin/plugins/animate/animate.min.css" rel="stylesheet">
+  <script src="/infinite_admin/plugins/loader/pace/pace.min.js"></script>
+  <script src="/infinite_admin/plugins/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/infinite_admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="/infinite_admin/plugins/cookie/js/js.cookie.js"></script>
+  <script src="/infinite_admin/plugins/tooltip/popper/popper.min.js"></script>
+  <script src="/infinite_admin/plugins/bootstrap/bootstrap4/js/bootstrap.js"></script>
+  <script src="/infinite_admin/plugins/scrollbar/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="/infinite_admin/js/apps.js?c0a5c4793bad7af05b75893838210479a54b5c67"></script>
+
+  <script>
+    $(function () {
+      App.init();
+    });
+  </script>
+
+    <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+    <script>
+      if(typeof Pusher != 'undefined') {
+        pusher = new Pusher('b8c557aff6dc48fa427c', { cluster: 'eu', encrypted: true });
+      }
+    </script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.3/jquery.timeago.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/locale/en-gb.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.5.2/flatpickr.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.5.2/flatpickr.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.16/css/dataTables.bootstrap4.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tributejs/3.5.3/tribute.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tributejs/3.5.3/tribute.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-table-headers/0.1.24/js/jquery.stickytableheaders.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.2.10/iframeResizer.contentWindow.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.3.4/web3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/6.0.0/intro.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/6.0.0/introjs.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min.js"></script>
+</script>
+<link rel="stylesheet" href="//rawcdn.githack.com/scottdejonge/map-icons/dbf6fd7caedd60d11b5bfb5f267a114a6847d012/dist/css/map-icons.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/easymde@2.10.1/dist/easymde.min.css">
+<link rel="stylesheet" href="/stylesheets/share.css">
+<link rel="stylesheet" href="/stylesheets/app.css?c0a5c4793bad7af05b75893838210479a54b5c67">
+
+<script src="//www.google.com/recaptcha/api.js"></script>
+<script src="//js.stripe.com/v3/"></script>
+<script src="//cdn.iframe.ly/embed.js?api_key=e1d943dc5a918696ab983d"></script>
+<script src="//maps.googleapis.com/maps/api/js?key=AIzaSyA7hlAPT6_S-aVuTc11o_w_19ttXyQ3tRU&amp;libraries=places"></script>
+<script src="//rawcdn.githack.com/bassjobsen/Bootstrap-3-Typeahead/067bd296184a4dda8c669923417124065b4ebced/bootstrap3-typeahead.min.js"></script>
+<script src="//rawcdn.githack.com/jackmoore/autosize/6ae70cd3d28888eb858eef1167e6ed75d25dff7f/dist/autosize.min.js"></script>
+<script src="//rawcdn.githack.com/mahnunchik/markerclustererplus/736b0e3a7d916fbeb2ee5007494f17a5329b11a8/src/markerclusterer.js"></script>
+<script src="//rawcdn.githack.com/scottdejonge/map-icons/dbf6fd7caedd60d11b5bfb5f267a114a6847d012/dist/js/map-icons.js"></script>
+<script src="//rawcdn.githack.com/euangoddard/clipboard2markdown/2d46aadd373f8b5cdb5fa0763090135ac31def13/to-markdown.js"></script>
+<script src="//rawcdn.githack.com/scottgonzalez/jquery-ui-extensions/fb7fd7df3d70e0288394f07bfe78262b548c30d6/src/autocomplete/jquery.ui.autocomplete.html.js"></script>
+<script src="//cdn.jsdelivr.net/npm/easymde@2.10.1/dist/easymde.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="/javascripts/linkify.min.js"></script>
+<script src="/javascripts/linkify-jquery.min.js"></script>
+<script src="/javascripts/jquery-deparam.js"></script>
+<script src="/javascripts/countUp.umd.js"></script>
+<script src="/javascripts/pagelets.js?c0a5c4793bad7af05b75893838210479a54b5c67"></script>
+<script src="/javascripts/jquery.lookup.js?c0a5c4793bad7af05b75893838210479a54b5c67"></script>
+<script src="/javascripts/ckeditor5/build/ckeditor.js?c0a5c4793bad7af05b75893838210479a54b5c67"></script>
+<script src="/javascripts/app.js?c0a5c4793bad7af05b75893838210479a54b5c67"></script>
+
+<link href="/images/black-on-transparent-sq.png?1681730096" rel="icon" type="image/png" />
+
+
 <body>
   <!-- Your original code goes here -->
 

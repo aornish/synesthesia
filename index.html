@@ -1,5 +1,10 @@
 
- <head>
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+  <!--<![endif]-->
+  <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   <link rel="manifest" href="/manifest.json">
@@ -34,25 +39,25 @@
 </script>
 <!-- End Google Analytics -->
 
-    <link rel="preload" href="https://dandelion.earth/fonts/circular/stylesheet.css" as="style">
-  <link href="https://dandelion.earth/fonts/circular/stylesheet.css" rel="stylesheet">
+  
+  <link rel="preload" href="/fonts/circular/stylesheet.css" as="style">
+  <link href="/fonts/circular/stylesheet.css" rel="stylesheet">
   <script src="//kit.fontawesome.com/13bb83cfaf.js"></script>
 
-  <link href="https://dandelion.earth/infinite_admin/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
-  <link href="https://dandelion.earth/infinite_admin/plugins/bootstrap/bootstrap4/css/bootstrap.css" rel="stylesheet">
-  <link href="https://dandelion.earth/infinite_admin/plugins/icon/themify-icons/themify-icons.css" rel="stylesheet">
-  <link href="https://dandelion.earth/infinite_admin/plugins/animate/animate.min.css" rel="stylesheet">
-  <script src="https://dandelion.earth/infinite_admin/plugins/loader/pace/pace.min.js"></script>
-  <script src="https://dandelion.earth/infinite_admin/plugins/jquery/jquery-3.2.1.min.js"></script>
-  <script src="https://dandelion.earth/infinite_admin/plugins/jquery-ui/jquery-ui.min.js"></script>
-  <script src="https://dandelion.earth/infinite_admin/plugins/cookie/js/js.cookie.js"></script>
-  <script src="https://dandelion.earth/infinite_admin/plugins/tooltip/popper/popper.min.js"></script>
-  <script src="https://dandelion.earth/infinite_admin/plugins/bootstrap/bootstrap4/js/bootstrap.js"></script>
-  <script src="https://dandelion.earth/infinite_admin/plugins/scrollbar/slimscroll/jquery.slimscroll.min.js"></script>
-  <script src="https://dandelion.earth/infinite_admin/js/apps.js?c0a5c4793bad7af05b75893838210479a54b5c67"></script>
+  <link href="/infinite_admin/plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+  <link href="/infinite_admin/plugins/bootstrap/bootstrap4/css/bootstrap.css" rel="stylesheet">
+  <link href="/infinite_admin/plugins/icon/themify-icons/themify-icons.css" rel="stylesheet">
+  <link href="/infinite_admin/plugins/animate/animate.min.css" rel="stylesheet">
+  <script src="/infinite_admin/plugins/loader/pace/pace.min.js"></script>
+  <script src="/infinite_admin/plugins/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/infinite_admin/plugins/jquery-ui/jquery-ui.min.js"></script>
+  <script src="/infinite_admin/plugins/cookie/js/js.cookie.js"></script>
+  <script src="/infinite_admin/plugins/tooltip/popper/popper.min.js"></script>
+  <script src="/infinite_admin/plugins/bootstrap/bootstrap4/js/bootstrap.js"></script>
+  <script src="/infinite_admin/plugins/scrollbar/slimscroll/jquery.slimscroll.min.js"></script>
+  <script src="/infinite_admin/js/apps.js?c0a5c4793bad7af05b75893838210479a54b5c67"></script>
 
   <script>
-
     $(function () {
       App.init();
     });
@@ -91,7 +96,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/6.0.0/introjs.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min.js"></script>
-</script>
+
 <link rel="stylesheet" href="//rawcdn.githack.com/scottdejonge/map-icons/dbf6fd7caedd60d11b5bfb5f267a114a6847d012/dist/css/map-icons.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/easymde@2.10.1/dist/easymde.min.css">
 <link rel="stylesheet" href="/stylesheets/share.css">
@@ -119,12 +124,634 @@
 <script src="/javascripts/app.js?c0a5c4793bad7af05b75893838210479a54b5c67"></script>
 
 <link href="/images/black-on-transparent-sq.png?1681730096" rel="icon" type="image/png" />
+<title>
+  SYNESTHESIA · 
+    Dandelion
+</title>
+<meta name="description" content="Mon 14th Aug 2023, 3pm – Sun 20th Aug 2023, 3pm Lisbon (UTC +01:00)">
+<meta property="og:title" content="SYNESTHESIA">
+<meta property="og:image" content="https://autopia.s3.amazonaws.com/2023/03/20/22/53/25/d2ddf885-7ff0-4907-b96b-1ef4497a6292/synes.jpg?c0a5c4793bad7af05b75893838210479a54b5c67">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SYNESTHESIA">
+<meta name="twitter:description" content="Mon 14th Aug 2023, 3pm – Sun 20th Aug 2023, 3pm Lisbon (UTC +01:00)">
+<meta name="twitter:image" content="https://autopia.s3.amazonaws.com/2023/03/20/22/53/25/d2ddf885-7ff0-4907-b96b-1ef4497a6292/synes.jpg?c0a5c4793bad7af05b75893838210479a54b5c67">
+<script>
+  $(function () {
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent Chrome 67 and earlier from automatically showing the prompt
+      e.preventDefault();
+      // Stash the event so it can be triggered later.
+      deferredPrompt = e;
+      // Update UI notify the user they can add to home screen
+      $('#a2hs').show()
+    });
+
+    $('#a2hs-btn').click(function () {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice
+              .then((choiceResult) => {
+                if (choiceResult.outcome === 'accepted') {
+                  // console.log('User accepted the A2HS prompt');
+                } else {
+                  // console.log('User dismissed the A2HS prompt');
+                }
+                deferredPrompt = null;
+              });
+    })
+
+    if ('serviceWorker' in navigator) {
+      // console.log("Will the service worker register?");
+      navigator.serviceWorker.register('/service-worker.js')
+              .then(function (reg) {
+                // console.log("Yes, it did.");
+              }).catch(function (err) {
+        // console.log("No it didn't. This happened:", err)
+      });
+    }
+  })
+</script>
+
+  <style>
+    @media (max-width: 991px) {
+      ul.nav.navbar-nav.navbar-right {
+        display: none;
+      }
+      #page-container {
+        padding-top: 2.75rem;
+      }
+    }
+  </style>
+
+    <link rel="canonical" href="https://dandelion.earth/events/6418e2fd2d1f6500025af12e" />
+  <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "name": "SYNESTHESIA",
+  "startDate": "2023-08-14T15:00:00+01:00",
+  "endDate": "2023-08-20T15:00:00+01:00",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "Deão",
+    "address": {
+      "@type": "PostalAddress",
+      "name": "Portugal"
+    }
+  },
+  "image": "https://autopia.s3.amazonaws.com/2023/03/20/22/53/25/d2ddf885-7ff0-4907-b96b-1ef4497a6292/synes.jpg",
+  "description": "This is an invitation only event <3All shmickets include:3 hearty meals a day + snacks.  Financial Aid:Friends of the forest! Don’t be dissuaded if you cannot afford a shmicket.  Historically, we’ve accepted or partially accepted the majority of low-income applications and artist grants. It’s important that money isn’t a barrier to entry to this co-creation.",
+  "organizer": {
+    "@type": "Organization",
+    "name": "The Garden",
+    "url": "http://thegarden.pt"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 1000.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 600.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 800.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 1.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 400.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 500.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/SoldOut"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 600.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/SoldOut"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 225.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 1.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 0.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 0.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 100.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 150.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 300.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 200.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 60.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 100.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/SoldOut"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 300.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 200.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 400.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 125.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 75.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 75.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 150.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 300.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 0.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 700.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/SoldOut"
+    },
+    {
+      "@type": "Offer",
+      "url": "https://dandelion.earth/events/6418e2fd2d1f6500025af12e",
+      "price": 500.0,
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock"
+    }
+  ]
+}
+  </script>
+
+</head>
+
+  <body>
+    <div id="fb-root"></div>
+    <script>
+      (function (d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id))
+                return;
+              js = d.createElement(s);
+              js.id = id;
+              js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=1498399346894704&autoLogAppEvents=1';
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- BEGIN #page-container -->
+    <div id="page-container" class="page-header-fixed page-sidebar-fixed  page-sidebar-minified   ">
+        <style>
+    #alert-wrap { position: absolute; z-index: 9999; top: 0; left: 50%; width: 90%; margin-left: -45% }
+    @media(min-width: 992px) {
+      #alert-wrap { width: 50%; margin-left: -25% }
+    }
+  </style>
+  <div id="alert-wrap" class="mt-3">
+    <div class="container">
+      
+    </div>
+  </div>
+  <script>
+    $(function () {
+      window.setTimeout(function () {
+        $("#alert-wrap .alert").alert('close');
+      }, 3000);
+    });
+  </script>
+
+      <!-- BEGIN #header -->
+      <div id="header" class="header navbar navbar-inverse navbar-fixed-top">
+        <!-- BEGIN container-fluid -->
+        <div class="container-fluid">
+          <!-- BEGIN mobile sidebar expand / collapse button -->
+          <div class="navbar-header">
+            <a href="/" class="navbar-brand">
+              <img style="max-height: 1.75rem; position: relative; top: -0.25rem" src="/images/white-on-black.png">
+            </a>
+            <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <!-- END mobile sidebar expand / collapse button -->
+          <!-- BEGIN header navigation right -->
+          <div class="navbar-xs-justified">
+            <style>
+  #feedback-li, #docs-li { display: none }
+  @media(min-width: 992px) { #feedback-li, #docs-li { display: list-item } }
+</style>
+<ul class="nav navbar-nav navbar-right">
+    <li class="d-none d-lg-inline" id="docs-li">
+      <a href="/docs">
+        How to use Dandelion
+      </a>
+    </li>
+    <li>
+      <a href="javascript:;" data-toggle="search-bar" class="navbar-icon">
+        <i class="ti-search"></i>
+      </a>
+    </li>
+    <li>
+      <a href="/accounts/new">
+        Sign up
+      </a>
+    </li>
+    <li>
+      <a href="/accounts/sign_in">
+        Sign in
+      </a>
+    </li>
+</ul>
+
+          </div>
+          <!-- END header navigation right -->
+        </div>
+        <!-- END container-fluid -->
+        <!-- BEGIN header-search-bar -->
+        <div class="header-search-bar">
+          <form action="/search" name="search_bar_form">
+            <div class="form-group">
+              <div class="left-icon"><i class="ti-search"></i></div>
+              <input name="q" type="text" class="form-control" id="header-search">
+              <a href="javascript:;" data-dismiss="search-bar" class="right-icon"><i class="ti-close"></i></a>
+            </div>
+          </form>
+        </div>
+        <!-- END header-search-bar -->
+      </div>
+      <!-- END #header -->
+      <!-- BEGIN #sidebar -->
+      <div id="sidebar" class="sidebar sidebar-inverse">
+        <!-- BEGIN scrollbar -->
+        <div data-scrollbar="true" data-height="100%">
+          <script>
+  $(function () {
+
+    $('#sidebar ul.nav li a[data-toggle]').tooltip($('#page-container').hasClass('page-sidebar-minified') ? 'enable' : 'disable')
+
+    if ($(window).width() < 992)
+      $('#sidebar ul.nav li a[data-toggle]').tooltip('disable')
+
+  })
+</script>
+<ul class="nav">
+  <li style="height: 0.5rem"></li>
+  <li class="">
+    <a href="/" data-toggle="tooltip" title="Home" data-placement="right">
+        <i class="ti-home"></i>
+        <span class="nav-link-text">Home</span>
+    </a>
+  </li>
+    <li class="d-lg-none">
+      <a href="/accounts/new" data-toggle="tooltip" title="Sign up" data-placement="right">
+        <i class="fa fa-fw fa-user-plus"></i>
+        <span class="nav-link-text">Sign up</span>
+      </a>
+    </li>
+    <li class="d-lg-none">
+      <a href="/accounts/sign_in" data-toggle="tooltip" title="Sign in" data-placement="right">
+        <i class="fa fa-fw fa-sign-in"></i>
+        <span class="nav-link-text">Sign in</span>
+      </a>
+    </li>
+  <li class="">
+    <a href="/events" data-toggle="tooltip" title="Events" data-placement="right">
+      <i class="fa fa-calendar-o"></i>
+      <span class="nav-link-text">Events</span>
+    </a>
+  </li>
+    <li class="">
+      <a href="/organisations" data-toggle="tooltip" title="Organisations" data-placement="right">
+        <i class="fa fa-flag"></i>
+        <span class="nav-link-text">Organisations</span>
+      </a>
+    </li>
+    <li class="">
+      <a href="/gatherings" data-toggle="tooltip" title="Gatherings" data-placement="right">
+        <i class="fa fa-moon-o"></i>
+        <span class="nav-link-text">Gatherings</span>
+      </a>
+    </li>
+  <li class="">
+    <a href="/facilitators" data-toggle="tooltip" title="Facilitators" data-placement="right">
+      <i class="fa fa-graduation-cap"></i>
+      <span class="nav-link-text">Facilitators</span>
+    </a>
+  </li>
+  <li class="">
+    <a href="/map" data-toggle="tooltip" title="Places" data-placement="right">
+      <i class="fa fa-binoculars"></i>
+      <span class="nav-link-text">Places</span>
+    </a>
+  </li>
+  <li>
+    <a href="/donate" data-toggle="tooltip" title="Donate" data-placement="right">
+      <i class="fa fa-fw fa-money"></i>
+      <span class="nav-link-text">Donate</span>
+    </a>
+  </li>
+  <li>
+    <a href="/code" data-toggle="tooltip" title="Code" data-placement="right">
+      <i class="fa fa-fw fa-github"></i>
+      <span class="nav-link-text">Code</span>
+    </a>
+  </li>
+  <li>
+    <a
+      href="/contact" data-toggle="tooltip" title="Contact us" data-placement="right">
+      <i class="fa fa-envelope"></i>
+      <span class="nav-link-text">Contact us</span>
+    </a>
+  </li>
+  <li>
+    <a data-nolt="modal" href="https://dandelion.nolt.io" data-toggle="tooltip" title="Feedback?" data-placement="right">
+      <i class="fa fa-fw fa-comment-o"></i>
+      <span class="nav-link-text">Feedback?</span>
+    </a>
+  </li>
+  <li>
+    <a href="/docs" data-toggle="tooltip" title="How to use Dandelion" data-placement="right">
+      <i class="fa fa-fw fa-question-circle-o"></i>
+      <span class="nav-link-text">How to use Dandelion</span>
+    </a>
+  </li>
+</ul>
+
+        </div>
+        <!-- END scrollbar -->
+        <!-- BEGIN sidebar-minify-btn -->
+        <a onclick="$.post('/sidebar', {minified: $('#page-container').hasClass('page-sidebar-minified') ? false : true});
+            $('#sidebar ul.nav li a[data-toggle]').tooltip($('#page-container').hasClass('page-sidebar-minified') ? 'disable' : 'enable')
+           " href="#" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="ti-arrow-left"></i></a>
+        <!-- END sidebar-minify-btn -->
+      </div>
+      <!-- END #sidebar -->
+      <!-- BEGIN #content -->
+      <div id="content" class="content">
+          <style>
+    #event-image { margin-top: -0.9375rem }
+    @media(min-width: 768px) { #event-image { margin-top: -1.5625rem } }
+  </style>
 
 
-<body>
-  <!-- Your original code goes here -->
+<div class="row justify-content-center">
+  <div class="col-lg-10">
+      <a href="/events/6418e2fd2d1f6500025af12e"><img id="event-image" class="w-100 mb-3" src="https://autopia.s3.amazonaws.com/2023/03/20/22/53/32/0f7bd1ec-5cca-4fd7-873b-fedfc5ef483a/synes.jpg"></a>
+  </div>
+</div>
+    <div id="buy-tickets" class="fixed-bottom bg-white p-3 w-100 d-block d-md-none" style="z-index: 1019; box-shadow: 0px -2px 4px 0px rgba(0,0,0,0.3);">
+      <a href="javascript:;" onclick="$(this).parent().hide();
+            $(window).scrollTop($('#purchase').offset()['top'] - $('#header').height() - 17)
+           " class="btn btn-primary btn-block">Get tickets</a>
+    </div>
+    <script>
+      $(function () {
+        $(window).scroll(function () {
+          if ((window.scrollY + window.innerHeight) > $('#purchase').offset()['top']) {
+            $('#buy-tickets').addClass('d-none').removeClass('d-block')
+            $('#discord-link').show()
+          } else {
+            $('#buy-tickets').addClass('d-block').removeClass('d-none')
+            $('#discord-link').hide()
+          }
+        })
+        $(window).scroll()
+      })
+    </script>
+  <div class="row">
+    <div class="col-lg-7">
+    <h1 class="mb-1">
+      SYNESTHESIA
+      <small>
+        <div class="d-inline float-right" data-pagelet-url="/events/6418e2fd2d1f6500025af12e/star">
+          
+        </div>
+      </small>
+    </h1>
+    <ul style="margin-left: 1.66em; font-size: 1rem" class="fa-ul text-dark mb-1">
+      <li>
+        <i  data-toggle="tooltip" title="Dates/times" class="fa fa-li fa-calendar"></i>
+          Mon 14th Aug 2023, 3pm – Sun 20th Aug 2023, 3pm Lisbon (UTC +01:00)
+          <div style="font-size: 0.85em" class="my-1">
+            <ul class="fa-ul" style="margin-left: 1.5em">
 
-   <div class="col-lg-5">
+
+</ul>
+
+          </div>
+      </li>
+      <li><i data-toggle="tooltip" title="Location" class="fa fa-li fa-map-marker"></i>
+          <a target="_blank" href="https://www.google.co.uk/maps?q=Deão, Portugal">Deão, Portugal</a>
+      </li>
+        <li>
+          <i data-toggle="tooltip" title="Short URL" class="fa fa-li fa-link"></i>
+          <a data-toggle="tooltip" title="Short URL" href="https://dandelion.earth/e/synesthete">https://dandelion.earth/e/synesthete</a>
+        </li>
+    </ul>
+    <div>
+      
+    </div>
+    <table class="table table-hr">
+  <tr>
+    <td>
+          Hosted by
+    </td>
+    <td>
+        <a href="/o/the-garden/events"><img src="https://autopia.s3.amazonaws.com/2022/05/10/14/33/10/42dc8e7e-52be-4838-a0a9-5230df20017d/photo_2021-10-21_02-41-37.jpg" style="width: 50px"></a>
+      <a href="/o/the-garden/events">The Garden</a>
+      
+    </td>
+  </tr>
+    <tr>
+      <td>Enquiries to</td>
+      <td>
+        <a target="_blank" href="mailto:participate@thegarden.pt">participate@thegarden.pt</a>
+      </td>
+    </tr>
+    <tr>
+      <td>Facilitators</td>
+      <td>
+        <div class="image-wall mb-1">
+  <a style="text-decoration: none" href="javascript:;" data-account-username="andr3">
+  <img class="  " data-toggle="tooltip" title="Andre"  style="width: 50px;"  src="https://autopia.s3.amazonaws.com/2022/01/25/18/24/17/0632d22f-203a-4063-93b8-26b28f33b0d7/photo_2019-09-18_15-47-00.jpg">
+</a>
+
+  <a style="text-decoration: none" href="javascript:;" data-account-username="anne_lorraine_selke">
+  <img class="  " data-toggle="tooltip" title="Anne-Lorraine"  style="width: 50px;"  src="https://autopia.s3.amazonaws.com/2020/01/26/17/30/43/057b454c-a17e-48a2-8428-e34c410e6c43/AL%20square.jpg">
+</a>
+
+  <a style="text-decoration: none" href="javascript:;" data-account-username="escottreid">
+  <img class="  " data-toggle="tooltip" title="Escott Reid"  style="width: 50px;"  src="https://autopia.s3.amazonaws.com/2020/02/11/12/30/00/584f7c1f-97c9-4005-949d-a15d235f9758/picture">
+</a>
+
+  <a style="text-decoration: none" href="javascript:;" data-account-username="ricky_thomas">
+  <img class="  " data-toggle="tooltip" title="Ricky"  style="width: 50px;"  src="https://autopia.s3.amazonaws.com/2020/01/20/13/15/48/87aebefd-ff25-4e89-b54b-ffd1f2e8908a/51484045_2805885202970160_5600495688782708736_n.jpg">
+</a>
+
+  <a style="text-decoration: none" href="javascript:;" data-account-username="thriving_surf_12">
+  <img class="  " data-toggle="tooltip" title="Sharon"  style="width: 50px;"  src="https://www.gravatar.com/avatar/ee8f7f3de73cad7e2ba968395179efb4?s=400&amp;d=https://dandelion.earth/images/silhouette.png">
+</a>
+
+  <a style="text-decoration: none" href="javascript:;" data-account-username="liza_simonova">
+  <img class="  " data-toggle="tooltip" title="liza"  style="width: 50px;"  src="https://autopia.s3.amazonaws.com/2020/01/20/01/02/26/5208f630-abbc-45ce-871b-9af18e02578e/Screenshot%202020-01-17%20at%2003.30.21.png">
+</a>
+
+  <a style="text-decoration: none" href="javascript:;" data-account-username="serene">
+  <img class="  " data-toggle="tooltip" title="serene"  style="width: 50px;"  src="https://autopia.s3.amazonaws.com/2020/02/05/00/09/32/07627dce-5793-4bc5-906a-f16b269dc19a/macedonia02-closeup2.JPEG">
+</a>
+
+</div>
+
+      </td>
+    </tr>
+  <tr>
+    <td>
+      Add to calendar
+      <td>
+        <a target="_blank" href="https://www.google.com/calendar/render?action=TEMPLATE&text=SYNESTHESIA&details=https%3A%2F%2Fdandelion.earth%2Fevents%2F6418e2fd2d1f6500025af12e&location=De%C3%A3o%2C%20Portugal&dates=20230814T140000Z%2F20230820T140000Z">
+  Google
+</a>
+&middot;
+<a target="_blank" href="/events/6418e2fd2d1f6500025af12e.ics">
+  ICS
+</a>
+
+      </td>
+    </tr>
+  </table>
+
+      <div class="wysiwyg">
+        <big>
+              <p><strong>This is an invitation only event &lt;3</strong><br><br><strong>All shmickets include:</strong><br>3 hearty meals a day + snacks. &nbsp;<br><br><strong>Financial Aid:</strong><br>Friends of the forest! Don’t be dissuaded if you cannot afford a shmicket. &nbsp;Historically, we’ve accepted or partially accepted the majority of low-income applications and artist grants. It’s important that money isn’t a barrier to entry to this co-creation.</p><p>Financial aid application is <a href="https://forms.gle/GQaxxSt6mDFvna447"><strong>here.</strong></a></p><p><strong>Refunds:</strong><br>If you ask for a refund before August 1st, 2023, you will be refunded fully, minus Stripe fees. &nbsp;August 2nd and afterwards, your contribution will be applied to a future event!</p>
+        </big>
+      </div>
+  </div>
+    <div class="col-lg-5">
   <div id="purchase">
         <div class="card mb-3 " id="select-tickets">
   <h3 class="card-header bg-primary text-white">Select tickets</h3>
@@ -584,6 +1211,44 @@
       <p>Looking for your transaction... <i class="fa fa-spin fa-circle-o-notch"></i></p>
     </div>
   </div>
-  <!-- End of your original code -->
-</body>
+  <script>
+      eventId = "6418e2fd2d1f6500025af12e"
+      placesRemaining = null
+      currency = "EUR"
+      currencySymbol = "€"
+      stripePk = "pk_live_51KRJB4Gi5eXNGIkHhMGff7jQ8QGHbyk93UyQkK1IsjtYWFCYuLIKpJqiThkmhbHq5G0IhjoUvtfuFpD3Vo0xXMMK00ZoyckXfF"
+      coinbase = true
+      seedsUsername = null
+      evmAddress = null
+      contractAddress = null
+      networkId = 
+      networkName = ''
+      signedIn = false
+  </script>
+  <script src="/javascripts/purchase.js?c0a5c4793bad7af05b75893838210479a54b5c67"></script>
+
+  </div>
+</div>
+
+</div>
+
+
+
+      </div>
+      <!-- END #content -->
+    </div>
+    <!-- END #page-container -->
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        </div>
+        <!-- /.modal-content -->
+      </div>
+      <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+
+  </body>
 </html>
